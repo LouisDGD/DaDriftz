@@ -9,6 +9,8 @@ let posX = 10
 let posY = 10
 let movementX = 0
 let movementY = 0
+let velocityX = 0
+let velocityY = 0
 
 
 function init() {
@@ -72,7 +74,6 @@ function keyTriggered(key){
     else if (key.key == 'q'){movementX = -1, movementY = 0}
     else if (key.key == 'd'){movementX = 1, movementY = 0}
     else if (key.key == ' '){movementX = 0, movementY = 0}
-
 }
 
 
