@@ -1,16 +1,20 @@
 // Game constants
+// A thing to know is that, velocity Y will be higher.
 const game = document.getElementById("gameCanvas");
 const ctx = game.getContext("2d")
+const maxSteerVelocity = 4
+const maxFrontVelocity = 8
+const maxBackVelocity = 2
 
 // Global variables
 let HEIGHT
 let WIDTH
-let posX = 10
-let posY = 10
-let movementX = 0
-let movementY = 0
-let velocityX = 0
-let velocityY = 0
+let posX = 300
+let posY = 300
+let steerMovement = 0
+let frontMovement = 0
+let steer = 1
+let speed = 1
 
 
 function init() {
@@ -59,21 +63,13 @@ function gameLoop() {
     requestAnimationFrame(gameLoop)
 }
 
+// Vehicle key related function
+function keyTriggered(key) {
+
+}
+
 // Vehicle moving function
 function move() {
-    posX = posX + movementX
-    posY = posY + movementY
+
 }
-
-
-// Vehicle key related function
-function keyTriggered(key){
-    console.log("Key triggered : " + key.key)
-         if (key.key == 'z'){movementX = 0, movementY = -1}
-    else if (key.key == 's'){movementX = 0, movementY = 1}
-    else if (key.key == 'q'){movementX = -1, movementY = 0}
-    else if (key.key == 'd'){movementX = 1, movementY = 0}
-    else if (key.key == ' '){movementX = 0, movementY = 0}
-}
-
 
